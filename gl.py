@@ -211,7 +211,7 @@ class Renderer(object):
         return glm.inverse(camMatrix)
 
 
-    def setShaders(self, vertexShader, fragmentShader):
+    def setShaders(self, vertexShader, fragmentShader, toonShader):
         if vertexShader is not None and fragmentShader is not None:
             self.active_shader = compileProgram( compileShader(vertexShader, GL_VERTEX_SHADER),
                                                  compileShader(fragmentShader, GL_FRAGMENT_SHADER))

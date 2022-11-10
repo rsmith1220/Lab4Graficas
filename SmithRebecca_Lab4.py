@@ -20,7 +20,7 @@ clock = pygame.time.Clock()
 
 rend = Renderer(screen)
 
-rend.setShaders(vertex_shader, fragment_shader)
+rend.setShaders(vertex_shader, toon_shader,toon_shader)
 
 rend.target.z = -5
 
@@ -54,6 +54,7 @@ while isRunning:
                 rend.filledMode()
             elif event.key == pygame.K_x:
                 rend.wireframeMode()
+            
 
     if keys[K_q]:
         if rend.camDistance > 2:
